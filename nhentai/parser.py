@@ -214,7 +214,7 @@ def search_parser(keyword, sorting, page):
 
         if 'result' not in response:
             logger.warn('No result in response in page {}'.format(p))
-            break
+            continue
 
         for row in response['result']:
             title = row['title']['english']
